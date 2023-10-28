@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< header>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    background: #000;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+
+.header-left-side img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.header-right-side {
+    display: flex;
+    align-items: center;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.header-admin .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.header-admin .dropdown-toggle h6 {
+    margin: 10px 20px 0 0;
+}
+
+.header-admin .dropdown-toggle img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.header-admin .dropdown-menu {
+    background: #000;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+
+}
+
+.header-admin .dropdown-menu a {
+    color: #fff;
+    transition: all .3s;
+}
+
+.header-admin .dropdown-menu a:hover {
+    color: black;
+    background: #fff;
+}
+
+
+
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< sidebar>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.sidebar {
+    display: flex;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< sidebar left side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.toggle-btn {
+    display: none;
+    /* Initially hide the toggle button */
+    position: fixed;
+    top: 80px;
+    right: 0;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 0 0 0 30px;
+    background-color: #000;
+    color: #fff;
+    z-index: 9999999999999999999999999999999;
+}
+
+.sidebar-left-side {
+    width: 17%;
+    height: 100vh;
+    background-color: #000;
+
+}
+
+.navs {
+    position: fixed;
+    width: 17%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+
+
+}
+
+.navs a {
+    color: #fff;
+    font-size: 23px;
+    width: 70%;
+    padding: 3px;
+    margin: 5px auto;
+    transition: all .3s;
+}
+
+.navs a:hover {
+    text-decoration: none;
+    color: #3498db;
+    background: #fff;
+    border-radius: 0 0 50px 0;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end sidebar left side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  sidebar ridgr side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.sidebar-right-table::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+.sidebar-right-table::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 15px;
+}
+
+.sidebar-right-table::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+
+
+.sidebar-right-side {
+    width: 80%;
+    margin: 130px auto 0 auto;
+}
+
+.sidebar-right-table {
+    width: 100%;
+    margin: auto;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 550px;
+
+    overflow-y: auto;
+
+}
+
+.sidebar-right-table h1 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.table {
+    border-radius: 10px;
+    margin-top: 30px;
+
+}
+
+
+
+
+.table td img {
+    width: 70px;
+    height: 70px;
+}
+
+.table thead th {
+    border: none;
+}
+
+
+.description {
+    width: 400px;
+}
+
+
+.table-form {
+    display: flex;
+
+}
+
+.table-forms {
+    display: flex;
+
+}
+
+.table-forms  form{
+    margin: 0 5px 0 0;
+
+
+}
+
+
+.table-form form {
+    margin: 0 5px 0 0;
+}
+
+.form-control{
+    margin: 20px 0 ;
+}
+
+.sidebar-right-table form label {
+
+    color: #fff;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end sidebar ridgr side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< sidebar>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 550px) and (max-width:768px) {
+
+
+    .header {
+        height: 80px;
+    }
+
+    .header-left-side img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    .header-admin .dropdown-toggle h6 {
+        margin: 10px 20px 0 0;
+        font-size: 12px;
+    }
+
+    .header-admin .dropdown-toggle p {
+        font-size: 12px;
+    }
+
+    .header-admin .dropdown-toggle img {
+        width: 40px;
+        height: 40px;
+
+    }
+
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .sidebar-left-side {
+        display: none;
+    }
+
+    .sidebar-left-side.show {
+        display: block;
+        position: fixed;
+        width: 25%;
+        right: 0;
+
+    }
+
+
+
+    .navs a {
+        font-size: 18px;
+        width: 80%;
+    }
+
+
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  sidebar ridgr side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    .sidebar-right-side {
+        width: 95%;
+        margin-top: 150px;
+
+    }
+
+
+    .sidebar-right-table h1 {
+        font-size: 25px;
+    }
+
+
+
+
+
+    .table th,
+    .table,
+    td {
+        font-size: 14px;
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end sidebar ridgr side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+}
+
+
+@media screen and (max-width:549px) {
+
+
+    .header {
+        height: 80px;
+        padding: 0 11%;
+    }
+
+    .header-left-side img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    .header-admin .dropdown-toggle h6 {
+        margin: 10px 20px 0 0;
+        font-size: 10px;
+    }
+
+    .header-admin .dropdown-toggle p {
+        font-size: 10px;
+    }
+
+    .header-admin .dropdown-toggle img {
+        width: 30px;
+        height: 30px;
+
+    }
+
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+    .header-admin .dropdown-menu {
+        border-bottom: 1px solid #fff;
+    }
+
+    .header-admin .dropdown-menu a {
+        color: #fff;
+        font-size: 12px;
+        transition: all .3s;
+    }
+
+    .header-admin .dropdown-menu a:hover {
+        color: black;
+        background: #fff;
+    }
+
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .sidebar-left-side {
+        display: none;
+    }
+
+    .sidebar-left-side.show {
+        display: block;
+        position: fixed;
+        width: 50%;
+        right: 0;
+
+    }
+
+    .navs {
+        width: 50%;
+    }
+
+    .navs a {
+        font-size: 16px;
+        width: 80%;
+    }
+
+
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  sidebar ridgr side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    .sidebar-right-side {
+        width: 95%;
+        margin-top: 150px;
+
+    }
+
+    .sidebar-right-table {
+        overflow: auto;
+    }
+
+    .sidebar-right-table h1 {
+        font-size: 22px;
+    }
+
+
+
+
+
+
+    .table th,
+    .table,
+    td {
+        font-size: 14px;
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end sidebar ridgr side>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+}

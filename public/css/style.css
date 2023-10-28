@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+html::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+
+/* :root {
+    --text-color: #444;
+    --text-sec-color: #fff;
+    --bg-btn-color: #70ACB1;
+    --bg-btn-hover-color: #38d2e0;
+    --bg-color: #000;
+    --border-top-colors: #cbcbcb;
+} */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.nav-right-side li {
+    list-style: none;
+    position: relative;
+}
+
+/* Style the user icon */
+.nav-right-side i.fa-user {
+    font-size: 24px;
+    /* User icon size */
+    /* User icon color */
+    cursor: pointer;
+}
+
+/* Style the dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -45px;
+    background-color: #fff;
+    /* Background color for the dropdown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 200px;
+    text-align: center;
+    padding: 0 20px 0 20px;
+    background: #000;
+    border-radius: 0 0 10px 10px;
+
+}
+
+
+.dropdown li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+    margin: 10px 0;
+    /* Dropdown link color */
+
+}
+
+/* Style the logout button */
+.dropdown form button {
+    background-color: #e74c3c;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Add a hover effect to the user icon for dropdown */
+.nav-right-side .has-children:hover .dropdown {
+    display: block;
+}
+
+
+
+
+
+.count {
+    padding: 2px 7px;
+    border-radius: 50%;
+    background: #0056b3;
+    font-size: 16px;
+
+}
+
+
+.navs a:hover span {
+    color: #fff;
+}
+
+
+
+.active a {
+
+    color: #FF0000;
+
+}
+
+.navs {
+    height: 90px;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 7777777777;
+
+}
+
+.navs .nav-left-side img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.navs .nav-left-side {
+    width: 50%;
+}
+
+.navs a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: all .3s;
+}
+
+.navs a:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+
+
+.nav-mid-right-side {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-media {
+    display: flex;
+    align-items: center;
+}
+
+.nav-media i {
+
+    margin: 0 10px;
+}
+
+#icon {
+    display: none;
+}
+
+
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<< <<<<<<<<<<<<<<<<<<< slide >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+.carousel-inner {
+    width: 100%;
+    height: 87.3vh;
+
+}
+
+.carousel-inner img {
+    width: 100%;
+
+}
+
+
+
+.carousel-inner h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    width: 300px;
+    height: 60px;
+    background-color: #18171784;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.carousel-inner p {
+    font-size: 20px;
+}
+
+
+
+/* .carousel {
+    height: 100vh;
+}
+
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+ */
+
+
+
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<  categories >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.categories-home {
+    text-align: center;
+    padding: 50px 0;
+    max-width: 80%;
+    margin: auto;
+
+}
+
+.head-h1 {
+    font-size: 40px;
+    margin: 50px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.categories-home-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+
+}
+
+.categories-home-card div {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    width: calc(25% - 20px);
+    text-align: center;
+}
+
+.categories-home-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.categories-home-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.categories-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.categories-btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<  collection  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.collection {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: #f5f5f5;
+    padding-bottom: 100px;
+}
+
+.collection-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.collection-card .contant {
+    width: calc(25% - 20px);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+.collection-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.collection-card h2 {
+    font-size: 18px;
+}
+
+
+.contant-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+}
+
+.contant-div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    transition: all .3s;
+    margin: 0 0 0 -10px;
+
+}
+
+.collection-card i {
+    margin: auto;
+    font-size: 20px;
+    color: #3498db;
+    transition: all .3s;
+
+}
+
+.contant-div div:hover {
+    background: #3498db;
+}
+
+.contant-div div:hover i {
+    color: #fff;
+
+
+}
+
+.collection-btn {
+    display: flex;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 0 10px;
+    height: 35px;
+    align-items: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.collection-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<  Services  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.services {
+    padding: 50px 0;
+}
+
+.services-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+}
+
+.services-card div {
+    width: 22%;
+    border: 2px solid #cbcbcb;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+.services-card div h2 {
+    font-size: 22px;
+}
+
+.services-card div i {
+    color: #3498db;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.services-card div p {
+    color: #333;
+}
+
+.services-card div:hover i {
+    color: #007bff;
+    transition: all .5s;
+}
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: auto;
+    background: #000;
+    margin-top: 50px;
+}
+
+footer .container {
+    max-width: 1200px;
+}
+
+.footer-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   media   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+@media screen and (min-width:801px) and (max-width:1024px) {
+    nav {
+        padding: 0;
+    }
+
+    .navs a {
+        font-size: 17px;
+        margin: 0 10px 0 0;
+    }
+
+}
+
+@media screen and (min-width:550px) and (max-width:800px) {
+
+
+    #icon {
+        display: flex;
+        color: #3498db;
+        font-size: 40px;
+        z-index: 9999999999999999;
+    }
+
+    .nav-mid-right-side {
+        width: 250px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: fixed;
+        background: #000;
+        color: #fff;
+        transition: all .5s;
+        border-radius: 0 0 10px 50px;
+        top: 90px;
+        right: -300px;
+        z-index: 888888888;
+    }
+
+
+    .nav-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .nav-media a {
+        padding: 10px;
+        font-size: 22px;
+    }
+
+    .nav-media a:hover {
+        background: #3498db;
+        color: #fff;
+    }
+
+
+    .carousel-inner img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .carousel-inner p {
+        font-size: 15px;
+    }
+
+    .carousel-inner h1 {
+        font-size: 35px;
+
+    }
+
+
+
+    .categories-home {
+        padding: 30px 0;
+    }
+
+
+    .categories-home-card div {
+        width: calc(50% - 20px);
+    }
+
+
+
+    .collection-card .contant {
+        width: calc(50% - 20px);
+
+    }
+
+
+    .services {
+        padding: 50px 0;
+    }
+
+    .services-card {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        max-width: 90%;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .services-card div {
+        width: 48%;
+        border: 2px solid #cbcbcb;
+        border-radius: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .services-card div h2 {
+        font-size: 22px;
+    }
+
+    .services-card div i {
+        color: #3498db;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+    .services-card div p {
+        color: #333;
+    }
+
+    .services-card div:hover i {
+        color: #007bff;
+        transition: all .5s;
+    }
+
+    .footer_moble {
+        margin-top: 40px;
+    }
+
+    footer .container {
+        max-width: 650px;
+    }
+
+
+
+    .dropdown {
+
+        top: 80%;
+        right: -80px;
+        background-color: #fff;
+
+
+    }
+
+
+    .dropdown li a {
+
+        color: #000;
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:549px) {
+
+
+    .head-h1 {
+        font-size: 30px;
+    }
+
+
+    .navs .nav-left-side img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #icon {
+        display: flex;
+        color: #3498db;
+        font-size: 30px;
+        z-index: 9999999999999999;
+    }
+
+    .nav-mid-right-side {
+        width: 250px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: fixed;
+        background: #000;
+        color: #fff;
+        transition: all .5s;
+        border-radius: 0 0 10px 50px;
+        top: 90px;
+        right: -300px;
+        z-index: 888888888;
+    }
+
+
+    .nav-media {
+        display: flex;
+        flex-direction: column;
+        text-align: top;
+    }
+
+    .nav-media a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .nav-media a:hover {
+        background: #3498db;
+        color: #fff;
+    }
+
+
+
+
+    .carousel-inner img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .carousel-inner p {
+        font-size: 15px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 25px;
+    }
+
+    .carousel-caption p {
+        font-size: 10px;
+    }
+
+
+
+
+
+
+
+    .categories-home-card div {
+        width: 100%;
+        margin: auto;
+    }
+
+    .categories-home-card div img {
+        height: 220px;
+    }
+
+
+
+
+    .collection-card {
+        gap: 20px 0;
+    }
+
+    .collection-card .contant {
+        width: 100%;
+    }
+
+
+
+    .services-card {
+        gap: 50px 0;
+    }
+
+    .services-card div {
+        width: 90%;
+
+    }
+
+
+    footer .container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+
+    .dropdown {
+
+        top: 80%;
+        right: -80px;
+        background-color: #fff;
+
+
+    }
+
+
+    .dropdown li a {
+
+        color: #000;
+
+
+    }
+
+
+}

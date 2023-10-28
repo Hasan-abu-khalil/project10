@@ -1,0 +1,85 @@
+
+
+:root {
+    --text-color: #444;
+    --text-sec-color: #fff;
+    --bg-btn-color: #70ACB1;
+    --bg-btn-hover-color: #38d2e0;
+    --bg-color: #000;
+    --border-top-colors: #cbcbcb;
+}
+
+.wrappers{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 150px 0 50px 0;
+    text-align: center;
+}
+
+.containers{
+    width: 22%;
+    height: 200px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 16px;
+    background: var(--bg-color);
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+.responsive-icon {
+    color: var(--bg-btn-color);
+    font-size: 35px;
+    transition: all .5s;
+
+}
+.containers:hover{
+    box-shadow: 10px 10px 5px var(--bg-btn-hover-color);
+
+}
+
+.containers:hover .responsive-icon {
+    color: var(--bg-btn-hover-color);
+    
+}
+
+span.num{
+    color: var(--text-sec-color);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+span.text{
+    color: var(--text-sec-color);
+    font-size: 15px;
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .wrappers{
+        gap: 30px;
+        margin: 50px 0 25px 0;
+    }
+    .containers{
+        width: 40%;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    .containers{
+        
+        width: 90%;
+        
+    }
+}

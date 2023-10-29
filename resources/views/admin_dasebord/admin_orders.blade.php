@@ -164,6 +164,7 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col"> user_id</th>
+                                            <th scope="col"> phone</th>
                                             <th scope="col">products</th>
                                             <th scope="col"> quantity</th>
                                             <th scope="col"> total</th>
@@ -179,6 +180,7 @@
                                                 <th scope="row">{{ $order->id }}</th>
                                                 <td>{{ $order->user->id }} -
                                                     {{ $order->user->name }}</td>
+                                                <td>{{ $order->user->phone }}</td>
                                                 <td>{{ $order->products->name }}</td>
                                                 <td>{{ $order->quantity }}</td>
                                                 <td>{{ $order->total }}</td>

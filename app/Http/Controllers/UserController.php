@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
+use App\Models\orders;
+
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +38,40 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    // public function store(Request $request)
+    // {
+    //     // Validate the input data
+    //     $validatedData = $request->validate([
+    //         'name' => 'required|string|max:50',
+    //         'email' => 'required|string|email|max:50',
+    //         'phone' => 'required|string|max:11',
+    //         'address' => 'required|string|max:50',
+    //         'city' => 'required|string|max:50',
+    //     ]);
+
+    //     // Retrieve the currently authenticated user
+    //     $user = Auth::user();
+
+    //     if (!$user) {
+    //         // Handle the case where the user is not authenticated or not found
+    //         return redirect()->route('login');
+    //     }
+
+    //     // Update the user's information
+    //     $user->name = $validatedData['name'];
+    //     $user->email = $validatedData['email'];
+    //     $user->phone = $validatedData['phone'];
+    //     $user->address = $validatedData['address'];
+    //     $user->city = $validatedData['city'];
+
+    //     // Save the updated user to the database
+
+    //     $user->save();
+
+    //     // You can redirect to a success page or any other appropriate action
+    //     return redirect()->route('success');
+    // }
+
     public function store(Request $request)
     {
         // Validate the input data
@@ -46,29 +83,46 @@ class UserController extends Controller
             'city' => 'required|string|max:50',
         ]);
 
-        // Retrieve the currently authenticated user
-        $user = Auth::user();
+        // Proceed with the checkout process without checking login
+        $cart = session('cart');
 
-        if (!$user) {
-            // Handle the case where the user is not authenticated or not found
-            return redirect()->route('login');
+        if ($cart) {
+            foreach ($cart as $id => $details) {
+                $product = Products::find($id);
+
+                if ($product) {
+                    // Insert the product into the database as an order
+                    $order = new orders;
+                    $order->products_id = $product->id;
+                    $order->user_id = auth()->user()->id;
+                    $order->quantity = $details['quantity'];
+                    $order->total = $details['price'] * $details['quantity'];
+                    $order->date = now();
+                    $order->save();
+                }
+            }
+
+            // Clear the cart after inserting the items into the database
+            session()->forget('cart');
+
+            // Update the user's information
+            $user = Auth::user();
+
+            if ($user) {
+                $user->name = $validatedData['name'];
+                $user->email = $validatedData['email'];
+                $user->phone = $validatedData['phone'];
+                $user->address = $validatedData['address'];
+                $user->city = $validatedData['city'];
+                $user->save();
+            }
+
+            // You can redirect to a success page or any other appropriate action
+            return redirect()->route('success');
+        } else {
+            return redirect()->route('cart')->with('error', 'Your cart is empty.');
         }
-
-        // Update the user's information
-        $user->name = $validatedData['name'];
-        $user->email = $validatedData['email'];
-        $user->phone = $validatedData['phone'];
-        $user->address = $validatedData['address'];
-        $user->city = $validatedData['city'];
-
-        // Save the updated user to the database
-
-        $user->save();
-
-        // You can redirect to a success page or any other appropriate action
-        return redirect()->route('success');
     }
-
 
 
     /**

@@ -87,37 +87,49 @@ class CheckoutController extends Controller
     }
 
 
+    // public function checkout()
+    // {
+    //     // Get the cart items from the session
+    //     $cart = session('cart');
+
+    //     if (!$cart) {
+    //         return redirect()->route('cart')->with('error', 'Your cart is empty.');
+    //     }
+
+    //     // Check if the user is logged in
+    //     if (auth()->check()) {
+    //         // The user is logged in, proceed with the checkout process
+    //         foreach ($cart as $id => $details) {
+    //             $product = Products::find($id);
+
+    //             if ($product) {
+    //                 // Insert the product into the database as an order
+    //                 $order = new orders;
+    //                 $order->products_id = $product->id;
+    //                 $order->user_id = auth()->user()->id;
+    //                 $order->quantity = $details['quantity'];
+    //                 $order->total = $details['price'] * $details['quantity'];
+    //                 $order->date = now();
+    //                 $order->save();
+    //             }
+    //         }
+
+    //         // Clear the cart after inserting the items into the database
+    //         session()->forget('cart');
+
+    //         return redirect()->route('checkout')->with('success', 'Checkout successful.');
+    //     } else {
+    //         // The user is not logged in, redirect to the login page
+    //         return redirect()->route('login')->with('error', 'Please log in to proceed with the checkout.');
+    //     }
+    // }
+
     public function checkout()
     {
-        // Get the cart items from the session
-        $cart = session('cart');
-
-        if (!$cart) {
-            return redirect()->route('cart')->with('error', 'Your cart is empty.');
-        }
-
         // Check if the user is logged in
         if (auth()->check()) {
-            // The user is logged in, proceed with the checkout process
-            foreach ($cart as $id => $details) {
-                $product = Products::find($id);
-
-                if ($product) {
-                    // Insert the product into the database as an order
-                    $order = new orders;
-                    $order->products_id = $product->id;
-                    $order->user_id = auth()->user()->id;
-                    $order->quantity = $details['quantity'];
-                    $order->total = $details['price'] * $details['quantity'];
-                    $order->date = now();
-                    $order->save();
-                }
-            }
-
-            // Clear the cart after inserting the items into the database
-            session()->forget('cart');
-
-            return redirect()->route('checkout')->with('success', 'Checkout successful.');
+            // The user is logged in, redirect to the checkout page
+            return redirect()->route('checkout');
         } else {
             // The user is not logged in, redirect to the login page
             return redirect()->route('login')->with('error', 'Please log in to proceed with the checkout.');

@@ -1,5 +1,5 @@
 <x-app-layout>
-
+    @section('title', 'About Us')
     <section class="header-about">
         <h1>About Us</h1>
     </section>

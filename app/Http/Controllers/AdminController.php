@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
+use App\Models\Category;
+use App\Models\orders;
+use App\Models\Products;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -18,8 +21,13 @@ class AdminController extends Controller
     {
         $users = User::all();
         $admins = Admin::all(); // Retrieve all administrators
-        return view('admin_dasebord\admin_admin', compact('admins','users'));
+        $categories = Category::all();
+        $order = orders::all();
+        $products = Products::all();
+
+        return view('admin_dasebord\admin_admin', compact('admins', 'users', 'categories', 'order', 'products'));
     }
+
 
     /**
      * Show the form for creating a new resource.

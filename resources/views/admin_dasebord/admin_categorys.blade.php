@@ -208,17 +208,15 @@
                                         @endforeach --}}
 
                                         @foreach ($categorys as $category)
-                                            <tr>
-                                                <td>
+                                            <tr >
+                                                <td  >
                                                     <img src=" ../img/{{ $category->image }}" alt="{{ $category->name }}"
                                                         width="60px" height="60px">
                                                 </td>
 
-                                                <td>{{ $category->name }}</td>
+                                                <td >{{ $category->name }}</td>
 
-
-
-                                                <td class="d-flex flex-row align-items-center ">
+                                                <td class="d-flex flex-row align-items-center  ">
 
                                                     <form
                                                         action="{{ route('admin_categorys.edit', ['admin_category' => $category->id]) }}"

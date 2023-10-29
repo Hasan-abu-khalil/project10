@@ -1,6 +1,7 @@
 <x-app-layout>
 
 
+    @section('title', 'Products')
 
     <header class="header-category">
         <h1>Categories</h1>

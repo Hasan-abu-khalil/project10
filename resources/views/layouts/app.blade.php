@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="home-responsive-number.css">
     <script src="https://kit.fontawesome.com/cccdab20bd.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../img/logo.png">
-    <title>Krkbah | </title>
+    <title>KRKABH |@yield('title') </title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

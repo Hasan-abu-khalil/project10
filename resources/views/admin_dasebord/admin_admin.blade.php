@@ -73,17 +73,18 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                {{-- @php
-                                $userCount = count($adminUser);
-                                $adminCategoriesCount = count($adminCategories);
-                                $adminPackageCount = count($adminPackage);
-                                $adminBookingCount = count($adminBooking);
-                            @endphp --}}
+                                @php
+                                    $userCount = count($users);
+                                    $categoriesCount = count($categories);
+                                    $productsCount = count($products);
+                                    $orderCount = count($order);
+                                @endphp
+
 
                                 <h4>Total user </h4>
                             </div>
                             <div class="card-body">
-                                {{-- {{ $userCount }} --}}
+                                {{ $userCount }}
                             </div>
                         </div>
                     </div>
@@ -98,7 +99,7 @@
                                 <h4>Total category </h4>
                             </div>
                             <div class="card-body">
-                                {{-- {{ $adminCategoriesCount }} --}}
+                                {{ $categoriesCount }}
                             </div>
                         </div>
                     </div>
@@ -110,11 +111,11 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Total Package</h4>
+                                <h4>Total Products</h4>
 
                             </div>
                             <div class="card-body">
-                                {{-- {{ $adminPackageCount }} --}}
+                                {{ $productsCount }}
 
                             </div>
                         </div>
@@ -127,11 +128,11 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Total Booking</h4>
+                                <h4>Total Orders</h4>
 
                             </div>
                             <div class="card-body">
-                                {{-- {{ $adminBookingCount }} --}}
+                                {{ $orderCount }}
 
                             </div>
                         </div>

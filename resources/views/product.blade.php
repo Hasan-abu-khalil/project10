@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title', 'product')
+
     <style>
         .rate {
             float: left;
@@ -148,7 +150,7 @@
         </div>
 
 
-        
+
 
     </section>
 

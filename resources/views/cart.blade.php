@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title', 'Cart')
+
     <section class="header-cart">
         <h1></h1>
     </section>

@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title', 'Checkout')
+
     <section class="header-checkout">
 
     </section>
@@ -37,7 +39,7 @@
 
 
 
-  
+
 
     <div class="payment-card">
 

@@ -1,5 +1,7 @@
 <x-app-layout>
 
+    @section('title', 'Contact Us')
+
     <section class="header-contact">
         <h1>Contact Us</h1>
     </section>

@@ -14,6 +14,12 @@
             @php
                 $total = 0;
             @endphp
+            @if (session()->has('message'))
+                <div class="alert alert-success text-center">
+                    {{ session()->get('message') }}
+                </div>
+            @endif
+            
 
             @if (session('cart') && count(session('cart')) > 0)
                 <div class="table-overflow">
@@ -45,14 +51,16 @@
                                     <td>
                                         <div class="cart-quantity">
 
-                                            <a href="cartdecrease/{{$id}}" class="cart-quantity-btn cart-quantity-decrease"
+                                            <a href="cartdecrease/{{ $id }}"
+                                                class="cart-quantity-btn cart-quantity-decrease"
                                                 data-id="{{ $id }}">-</a>
 
                                             <input type="number" class="cart-quantity-input"
                                                 name="quantity[{{ $id }}]" value="{{ $details['quantity'] }}"
                                                 min="1">
 
-                                            <a href="cart/{{$id}}" class="cart-quantity-btn cart-quantity-increase"
+                                            <a href="cart/{{ $id }}"
+                                                class="cart-quantity-btn cart-quantity-increase"
                                                 data-id="{{ $id }}">+</a>
 
                                         </div>

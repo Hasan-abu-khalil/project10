@@ -13,11 +13,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 40px;
     color: #fff;
     font-weight: 500;
     width: 300px;
-    height: 60px;
+    height: 50px;
     background-color: #18171784;
     text-align: center;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .header-contact {
     background: url(../img/master4.PNG);
-    height: 500px;
+    height: 400px;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -97,12 +97,7 @@
 }
 
 
-.massage div {
-    width: 100%;
-    display: flex;
-    gap: 50px;
-    margin: 20px 0;
-}
+
 
 .massage div input {
     width: 100%;
@@ -144,7 +139,9 @@
     color: var(--text-sec-color);
 }
 
-
+.form-group label {
+    color: #666;
+}
 
 .confirm {
     width: 200px;
@@ -152,12 +149,15 @@
     display: flex;
     float: right;
     justify-content: center;
+    align-items: center;
     margin: 20px 0;
     color: var(--text-sec-color);
     background: var(--bg-btn-color);
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: all .5s;
+
+
 }
 
 .confirm:hover {
@@ -238,30 +238,21 @@
     }
 
     .massage {
-        max-width: 90%;
-        margin: 50px auto 50px auto;
+        max-width: 100%;
+        margin: 50px auto;
     }
 
-    .massage div {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        margin: 0;
+
+    .form-group {
+        width: 90%;
+        margin: 10px auto;
     }
 
-    .massage div input {
-        width: 100%;
-        margin: 6px 0;
-    }
-
-    .massage textarea {
-        margin: 6px 0;
-
-    }
 
     .confirm {
         float: none;
+       margin: 20px auto
+
     }
 
 

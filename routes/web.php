@@ -37,7 +37,8 @@ Route::get('about', function () {
 //     return view('contact');
 // });
 
-
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
 
 
@@ -87,8 +88,6 @@ Route::resource('order', OrdersController::class);
 Route::resource('cart', CartsController::class);
 
 
-Route::get('contact', [ContactController::class, 'index']);
-Route::post('contact', [ContactController::class, 'store'])->name('contact_store');
 
 
 

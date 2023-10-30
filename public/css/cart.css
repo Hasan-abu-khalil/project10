@@ -9,8 +9,8 @@
 
 
 .header-cart {
-    background: url(../img/15.jpg);
-    height: 500px;
+    background: url(../img/master1.PNG);
+    height: 400px;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -194,9 +194,9 @@ margin: 20px 0;}
         height: 300px;
     }
 
-    .head-h1 {
+    /* .head-h1 {
         font-size: 24px;
-    }
+    } */
 
     .carts {
         overflow: scroll;

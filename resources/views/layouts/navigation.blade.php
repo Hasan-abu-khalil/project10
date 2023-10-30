@@ -10,7 +10,7 @@
 
             <a href="categories" class="{{ request()->is('categories*') ? 'active' : '' }}">Products</a>
             <a href="about" class="{{ request()->is('about*') ? 'active' : '' }}">About</a>
-            <a href="contact" class="{{ request()->is('contact*') ? 'active' : '' }}">Contact US</a>
+            <a href="contact-us" class="{{ request()->is('contact-us*') ? 'active' : '' }}">Contact US</a>
         </div>
 
         <div class="nav-right-side nav-media">

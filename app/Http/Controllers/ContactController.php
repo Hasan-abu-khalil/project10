@@ -4,33 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
-use App\Mail\ContactMail;
-use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function index()
     {
-        return view('contact');
+        return view('contactForm');
     }
 
-
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required|digits:11|numeric',
+            'phone' => 'required|digits:10|numeric',
             'subject' => 'required',
-            'message' => 'required',
+            'message' => 'required'
         ]);
 
-        $contact = Contact::create($request->all());
-
-        // Send email
-        // Mail::to('hasan.aak1998@gmail.com')->send(new ContactMail($contact));
+        Contact::create($request->all());
 
         return redirect()->back()
-            ->with('success', 'Thank you for contacting us. We will get back to you shortly.');
+                         ->with(['success' => 'Thank you for contact us. we will contact you shortly.']);
     }
 }

@@ -114,7 +114,11 @@
     <header class="header">
         <h1>Single Product</h1>
     </header>
-
+    @if (session()->has('message'))
+        <div class="alert alert-success text-center">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     <section class="product">
 
         <div class="product-left-side">

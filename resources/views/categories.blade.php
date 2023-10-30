@@ -55,7 +55,7 @@
 
             <div class="form-search-categories">
                 <select name="price_range" id="price_range">
-                    <option value="">Any</option>
+                    <option value="">Price</option>
                     <option value="0-20">0 - 20</option>
                     <option value="21-80">21 - 80</option>
                     <option value="81-150">81 - 150</option>
@@ -73,8 +73,14 @@
 
 
 
+        @if (session()->has('message'))
+            <div class="alert alert-success text-center">
+                {{ session()->get('message') }}
+            </div>
+        @endif
 
         <div class="slide-categories-card">
+
             @if (isset($message))
                 <p>{{ $message }}</p>
             @else

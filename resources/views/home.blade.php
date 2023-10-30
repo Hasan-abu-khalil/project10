@@ -14,7 +14,8 @@
             <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
                 <div>
                     <h1>KRKBAH</h1>
-
+                    <p>Enjoy shopping in the store</p>
+                    <a href="categories">Shop now</a>
                 </div>
             </div>
 
@@ -56,7 +57,11 @@
 
 
 
-
+    @if (session()->has('message'))
+        <div class="alert alert-success text-center">
+            {{ session()->get('message') }}
+        </div>
+    @endif
 
 
     <section class="categories-home">
@@ -116,6 +121,7 @@
 
 
     <section class="collection">
+
         <h1 class="head-h1">New Collection</h1>
         <div class="collection-card">
 

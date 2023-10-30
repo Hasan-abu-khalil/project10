@@ -30,7 +30,7 @@ use App\Http\Controllers\ContactController;
 
 
 Route::get('about', function () {
-    return view('about');
+    return View('about');
 })->name('about');
 
 // Route::get('contact', function () {

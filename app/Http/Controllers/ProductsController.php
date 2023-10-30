@@ -47,6 +47,7 @@ class ProductsController extends Controller
 
         return redirect()->back()->with('message', 'Product added to cart successfully');
     }
+    
     public function cartdecrease(Request $request, $id)
     {
         $product = Products::find($id);

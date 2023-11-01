@@ -47,7 +47,7 @@ class ProductsController extends Controller
 
         return redirect()->back()->with('message', 'Product added to cart successfully');
     }
-    
+
     public function cartdecrease(Request $request, $id)
     {
         $product = Products::find($id);
@@ -175,11 +175,27 @@ class ProductsController extends Controller
     {
         $product = new Products();
         $product->name = $request->input('name');
-        $product->image = $request->input('image');
         $product->description = $request->input('description');
         $product->price = $request->input('price');
         $product->quantity = $request->input('quantity');
         $product->category_id = $request->input('category_id');
+
+        $relativeImagePath = null;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $newImageName = uniqid() . '-' . $image->getClientOriginalName();
+            $image->move(public_path('img'), $newImageName);
+            $relativeImagePath = '/' . $newImageName;
+        }
+
+        // Check if $relativeImagePath is null and set a default image if needed
+        if (!$relativeImagePath) {
+            $relativeImagePath = '/default_image.jpg'; // Change to your default image path
+        }
+
+        // Set the 'image' field to the path
+        $product->image = $relativeImagePath;
 
         $product->save();
 
@@ -244,11 +260,20 @@ class ProductsController extends Controller
     {
         $product->update([
             'name' => $request->input('name'),
-            'image' => $request->input('image'),
+            // 'image' => $request->input('image'),
             'price' => $request->input('price'),
             'description' => $request->input('description'),
             'category_id' => $request->input('category_id'),
         ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $newImageName = uniqid() . '-' . $image->getClientOriginalName();
+            $image->move(public_path('img'), $newImageName);
+            $product->image = '/' . $newImageName;
+        }
+
+        $product->update($request->except('image'));
 
         return redirect()->route('admin_products', ['product' => $product->id])->with('success', 'Products updated successfully');
     }

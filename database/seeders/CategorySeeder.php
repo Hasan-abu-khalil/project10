@@ -21,22 +21,22 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             [
                 'name' => 'Antique',
-                'image' => '../img/a3.jfif',
+                'image' => '/a3.jfif',
 
             ],
             [
                 'name' => 'Miscellaneus',
-                'image' => '../img/4-1.jpg',
+                'image' => '/4-1.jpg',
 
             ],
             [
                 'name' => 'kitchen tools',
-                'image' => '../img/k1.jpg',
+                'image' => '/k1.jpg',
 
             ] ,
             [
                 'name' => 'electronic equipment ',
-                'image' => '../img/11.jpg',
+                'image' => '/11.jpg',
 
             ]
         ]);

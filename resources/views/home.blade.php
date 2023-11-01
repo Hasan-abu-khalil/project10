@@ -70,7 +70,7 @@
 
             @foreach ($categorys as $category)
                 <div>
-                    <img src="{{ $category->image }}" alt="">
+                    <img src="../img{{ $category->image }}" alt="">
                     <h2>{{ $category->name }}</h2>
                     {{-- <a href="categories" class="categories-btn"> View Details</a> --}}
                     <a href="{{ route('yousef', $category->id) }}" class="categories-btn"> View Details</a>
@@ -87,33 +87,6 @@
 
 
 
-    <!--
-    <div class="wrappers">
-
-        <div class="containers">
-            <i class="fa-solid fa-truck responsive-icon"></i>
-            <span class="num" data-vla="25000">000</span>
-            <span class="text"> Delivered</span>
-        </div>
-
-        <div class="containers">
-            <i class="fas fa-solid fa-smile-beam responsive-icon"></i>
-            <span class="num" data-vla="22500">000</span>
-            <span class="text">Happy customers</span>
-        </div>
-
-        <div class="containers">
-            <i class="fas fa-solid fa-list responsive-icon"></i>
-            <span class="num" data-vla="20500">000</span>
-            <span class="text">Menu items</span>
-        </div>
-
-        <div class="containers">
-            <i class="fas fa-solid fa-star responsive-icon"></i>
-            <span class="num" data-vla="18550">000</span>
-            <span class="text">Five stars</span>
-        </div>
-    </div> -->
 
 
 
@@ -129,7 +102,7 @@
             @foreach ($products as $product)
                 @if ($count < 8)
                     <div class="contant">
-                        <img src="../{{ $product->image }}" alt="">
+                        <img src="../img{{ $product->image }}" alt="">
                         <div class="contant-div">
                             <h2>{{ $product->name }}</h2>
                             <p>jd {{ $product->price }}</p>

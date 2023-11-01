@@ -19,7 +19,7 @@
                     {{ session()->get('message') }}
                 </div>
             @endif
-            
+
 
             @if (session('cart') && count(session('cart')) > 0)
                 <div class="table-overflow">
@@ -42,7 +42,7 @@
                                     $total += $details['price'] * $details['quantity'];
                                 @endphp
                                 <tr class="cart">
-                                    <td><img src="../{{ $details['image'] }}" alt=""></td>
+                                    <td><img src="../img{{ $details['image'] }}" alt=""></td>
 
                                     <td>{{ $details['name'] }}</td>
 

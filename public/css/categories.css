@@ -31,7 +31,7 @@
     max-width: 78%;
     margin: 35px auto;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-around;
 
 }
 
@@ -178,7 +178,11 @@
 @media (max-width: 768px) {
 
     .container-categories {
-        max-width: 90%;
+        max-width: 100%;
+    }
+    .form-search-categories{
+        max-width: 95%;
+        justify-content: space-between;
     }
 
     .container-categories button {
@@ -226,8 +230,8 @@
     }
 
     .form-search-categories {
-        max-width: 90%;
-        margin: 10px auto;
+        max-width: 95%;
+        margin: 15px auto;
         display: flex;
         flex-direction: column;
     }
@@ -239,7 +243,7 @@
         border-radius: 4px;
         margin-bottom: 10px;
         width: 90%;
-        margin: 10px auto;
+        margin: 0 auto;
     }
 
     .form-search-categories button {
@@ -251,7 +255,7 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         width: 90%;
-        margin: 10px auto;
+        margin: 0 auto;
     }
 
 

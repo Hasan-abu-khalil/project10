@@ -29,7 +29,7 @@ class ProductsSeeder extends Seeder
                 'price' => 20.50,
                 'quantity' => 1,
                 'category_id' => 3,
-                'image' => '../img/k2.webp',
+                'image' => '/k2.webp',
             ],
             [
                 'name' => 'Trays',
@@ -37,7 +37,7 @@ class ProductsSeeder extends Seeder
                 'price' => 8,
                 'quantity' => 1,
                 'category_id' => 3,
-                'image' => '../img/m2.webp',
+                'image' => '/m2.webp',
             ],
             [
                 'name' => 'Old Keys',
@@ -45,7 +45,7 @@ class ProductsSeeder extends Seeder
                 'price' => 5.80,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/a1.jpg',
+                'image' => '/a1.jpg',
             ],
             [
                 'name' => 'Sandblasting Glass',
@@ -53,7 +53,7 @@ class ProductsSeeder extends Seeder
                 'price' => 80,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/a2.webp',
+                'image' => '/a2.webp',
             ],
             [
                 'name' => 'Pots',
@@ -61,7 +61,7 @@ class ProductsSeeder extends Seeder
                 'price' => 100,
                 'quantity' => 1,
                 'category_id' => 3,
-                'image' => '../img/k6.webp',
+                'image' => '/k6.webp',
             ],
             [
                 'name' => 'Pocket Watch',
@@ -69,7 +69,7 @@ class ProductsSeeder extends Seeder
                 'price' => 30,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/1-1.jpg',
+                'image' => '/1-1.jpg',
             ],
             [
                 'name' => 'Flower Vase',
@@ -77,7 +77,7 @@ class ProductsSeeder extends Seeder
                 'price' => 55.20,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/1-2.jpg',
+                'image' => '/1-2.jpg',
             ],
             [
                 'name' => 'Washbasin Set',
@@ -85,7 +85,7 @@ class ProductsSeeder extends Seeder
                 'price' => 25,
                 'quantity' => 1,
                 'category_id' => 2,
-                'image' => '../img/2-8.jpg',
+                'image' => '/2-8.jpg',
             ],
             [
                 'name' => 'Food Keeper',
@@ -93,7 +93,7 @@ class ProductsSeeder extends Seeder
                 'price' => 12,
                 'quantity' => 1,
                 'category_id' => 2,
-                'image' => '../img/4-2.jpg',
+                'image' => '/4-2.jpg',
             ],
             [
                 'name' => 'Knife Set',
@@ -101,7 +101,7 @@ class ProductsSeeder extends Seeder
                 'price' => 8,
                 'quantity' => 1,
                 'category_id' => 3,
-                'image' => '../img/k5.jfif',
+                'image' => '/k5.jfif',
             ],
             [
                 'name' => 'Blender',
@@ -109,7 +109,7 @@ class ProductsSeeder extends Seeder
                 'price' => 8,
                 'quantity' => 1,
                 'category_id' => 4,
-                'image' => '../img/e2.jfif',
+                'image' => '/e2.jfif',
             ],
             [
                 'name' => 'Hand Blender',
@@ -117,7 +117,7 @@ class ProductsSeeder extends Seeder
                 'price' => 35,
                 'quantity' => 1,
                 'category_id' => 4,
-                'image' => '../img/e1jfif.jfif',
+                'image' => '/e1jfif.jfif',
             ],
             [
                 'name' => 'Ladles',
@@ -125,7 +125,7 @@ class ProductsSeeder extends Seeder
                 'price' => 14,
                 'quantity' => 1,
                 'category_id' => 3,
-                'image' => '../img/k3.webp',
+                'image' => '/k3.webp',
             ],
             [
                 'name' => 'Vase',
@@ -133,7 +133,7 @@ class ProductsSeeder extends Seeder
                 'price' => 44.5,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/1-8.jpg',
+                'image' => '/1-8.jpg',
             ],
             [
                 'name' => 'Straw Baskets',
@@ -141,7 +141,7 @@ class ProductsSeeder extends Seeder
                 'price' => 70,
                 'quantity' => 1,
                 'category_id' => 2,
-                'image' => '../img/m1.jpg',
+                'image' => '/m1.jpg',
             ],
             [
                 'name' => 'Land Line',
@@ -149,7 +149,7 @@ class ProductsSeeder extends Seeder
                 'price' => 5,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/1-4.jpg',
+                'image' => '/1-4.jpg',
             ],
             [
                 'name' => 'Spoon Holder',
@@ -157,7 +157,7 @@ class ProductsSeeder extends Seeder
                 'price' => 9,
                 'quantity' => 1,
                 'category_id' => 3,
-                'image' => '../img/k7.jfif',
+                'image' => '/k7.jfif',
             ],
             [
                 'name' => 'Soap Tools',
@@ -165,7 +165,7 @@ class ProductsSeeder extends Seeder
                 'price' => 8,
                 'quantity' => 1,
                 'category_id' => 2,
-                'image' => '../img/2-6.jpg',
+                'image' => '/2-6.jpg',
             ],
             [
                 'name' => 'Clock',
@@ -173,7 +173,7 @@ class ProductsSeeder extends Seeder
                 'price' => 8,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/a3.jfif',
+                'image' => '/a3.jfif',
             ],
             [
                 'name' => 'Glass Set',
@@ -181,7 +181,7 @@ class ProductsSeeder extends Seeder
                 'price' => 76,
                 'quantity' => 1,
                 'category_id' => 1,
-                'image' => '../img/13.jpg',
+                'image' => '/13.jpg',
             ],
 
 

@@ -72,7 +72,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>KRKABH |  @yield('title')</title>
+    <title>KRKABH | @yield('title')</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ url('assets/modules/bootstrap/css/bootstrap.min.css ') }}">
@@ -321,9 +321,9 @@
                             <div class="d-sm-none d-lg-inline-block">
 
                                 @auth
-                                {{ Auth::user()->name }}
-                                {{-- {{ Auth::user()->role }} --}}
-                            @endauth
+                                    {{ Auth::user()->name }}
+                                    {{-- {{ Auth::user()->role }} --}}
+                                @endauth
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -340,43 +340,56 @@
                             <div class="dropdown-divider"></div>
                             <a href="#" class="dropdown-item has-icon text-danger">
 
-                                <i class="fas fa-sign-out-alt"></i> Logout
+                                <i class="fas fa-sign-out-alt"></i>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit"
+                                        style="outline: none;
+                                    border: none;
+                                    color: red;
+                                    background: none;
+                                    ">{{ __('Log Out') }}</button>
+                                </form>
+
 
                             </a>
+                    <li>
+                        <!-- Authentication -->
 
-
-                        </div>
                     </li>
+
+        </div>
+        </li>
+        </ul>
+        </nav>
+
+
+        <div class="main-sidebar sidebar-style-2">
+            <aside id="sidebar-wrapper">
+                <div class="sidebar-brand">
+                    <a href="">KARKABH</a>
+                </div>
+                <div class="sidebar-brand sidebar-brand-sm">
+                    <a href="index.html">St</a>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-header">Dashboard</li>
+                    <li class="dropdown active">
+                        <a href="#" class="nav-link has-dropdown"><i
+                                class="fas fa-fire"></i><span>Dashboard</span></a>
+                        <ul class="dropdown-menu">
+                            <li class=active><a class="nav-link" href="/"> Home Page</a></li>
+                            <li><a class="nav-link" href="{{ route('admin_admin') }}">Admin</a></li>
+                            <li><a class="nav-link" href="{{ route('admin_user.index') }}">User</a></li>
+                            <li><a class="nav-link" href="{{ route('admin_categorys.show') }}">Category</a></li>
+                            <li><a class="nav-link" href="{{ route('admin_products') }}">product</a></li>
+                            <li><a class="nav-link" href="{{ route('admin_orders.index') }}">Order</a></li>
+
+                        </ul>
+                    </li>
+
                 </ul>
-            </nav>
 
 
-            <div class="main-sidebar sidebar-style-2">
-                <aside id="sidebar-wrapper">
-                    <div class="sidebar-brand">
-                        <a href="">KARKABH</a>
-                    </div>
-                    <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">St</a>
-                    </div>
-                    <ul class="sidebar-menu">
-                        <li class="menu-header">Dashboard</li>
-                        <li class="dropdown active">
-                            <a href="#" class="nav-link has-dropdown"><i
-                                    class="fas fa-fire"></i><span>Dashboard</span></a>
-                            <ul class="dropdown-menu">
-                                <li class=active><a class="nav-link" href="/"> Home Page</a></li>
-                                <li><a class="nav-link" href="{{ route('admin_admin') }}">Admin</a></li>
-                                <li><a class="nav-link" href="{{ route('admin_user.index') }}">User</a></li>
-                                <li><a class="nav-link" href="{{ route('admin_categorys.show') }}">Category</a></li>
-                                <li><a class="nav-link" href="{{ route('admin_products') }}">product</a></li>
-                                <li><a class="nav-link" href="{{ route('admin_orders.index') }}">Order</a></li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-
-
-                </aside>
-            </div>
+            </aside>
+        </div>

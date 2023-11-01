@@ -4,7 +4,7 @@
 @section('title', 'Create Product')
 
 @section('content')
-   
+
 
 
     <div class="main-content">
@@ -17,7 +17,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('product.store') }}">
+                                <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="form-group">

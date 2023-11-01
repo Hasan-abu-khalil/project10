@@ -32,7 +32,6 @@ class CategoryController extends Controller
         $categorys = Category::all();
 
         return view('admin_dasebord\admin_categorys_create');
-
     }
 
     /**
@@ -46,7 +45,19 @@ class CategoryController extends Controller
         // Create a new category with the form data
         $category = new Category();
         $category->name = $request->input('name');
-        $category->image = $request->input('image');
+
+        $relativeImagePath = null;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $newImageName = uniqid() . '-' . $image->getClientOriginalName();
+            $image->move(public_path('img'), $newImageName);
+            $relativeImagePath = '/' . $newImageName;
+        }
+
+        // Set the 'image' field to the path
+        $category->image = $relativeImagePath;
+
 
         $category->save();
 
@@ -86,9 +97,18 @@ class CategoryController extends Controller
     {
         $admin_category->update([
             'name' => $request->input('name'),
-            'image' => $request->input('image'),
+            // 'image' => $request->input('image'),
 
         ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $newImageName = uniqid() . '-' . $image->getClientOriginalName();
+            $image->move(public_path('img'), $newImageName);
+            $admin_category->image = '/' . $newImageName;
+        }
+
+        $admin_category->update($request->except('image'));
 
         return redirect()->route('admin_categorys.show', ['admin_category' => $admin_category->id])->with('success', 'Category updated successfully');
     }
@@ -106,5 +126,4 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('admin_categorys.show', ['admin_category' => $id])->with('success', 'Category deleted successfully');
     }
-
 }

@@ -122,7 +122,7 @@
     <section class="product">
 
         <div class="product-left-side">
-            <img src="../{{ $product->image }}" alt="">
+            <img src="../img{{ $product->image }}" alt="">
         </div>
         <div class="product-right-side">
             <h1>{{ $product->name }}</h1>

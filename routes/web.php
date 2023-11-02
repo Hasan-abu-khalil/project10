@@ -10,11 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
-
-
-
-
-
+use App\Http\Controllers\GoogleAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -102,8 +98,13 @@ Route::get('/success', function () {
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
 
 
-
+Route::get('auth/google', [GoogleAuthController::class, 'redirectToGoogle'])->name('google');
+Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback']);
 // admin_dasebord route
+
+
+
+
 
 Route::prefix('/')->middleware(['auth', 'admin'])->group(function () {
 
@@ -147,16 +148,4 @@ Route::prefix('/')->middleware(['auth', 'admin'])->group(function () {
     Route::put('/admin_products/{products}', [ProductsController::class, 'update'])->name('admin_products.update');
     Route::delete('/admin_products/{products}', [ProductsController::class, 'destroy'])->name('admin_products.destroy');
     Route::get('/admin_products', [ProductsController::class, 'shows'])->name('admin_products');
-
 });
-
-
-
-
-
-
-
-
-
-
-

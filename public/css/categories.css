@@ -163,16 +163,20 @@
 }
 
 
+
 .categories-icon i {
     padding: 10px 0 0 0;
+    margin: 10px 0 0 10px;
     font-size: 20px;
     color: #3498db;
+
+
 }
 
 .categories-icon i:hover {
     color: #0056b3;
     transition: all 0.3s;
-
+    
 }
 
 @media (max-width: 768px) {

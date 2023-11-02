@@ -51,10 +51,9 @@
                             </div>
                             <div>
                                 <a href="{{ route('register') }}">Register</a>
-
                                 <br>
                                 <br>
-
+                                <a href="{{ route('google') }}">google</a>
                             </div>
 
                             <x-primary-button type="submit" class="btn btn-block submit">Log In</x-primary-button>

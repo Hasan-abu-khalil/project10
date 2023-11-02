@@ -97,7 +97,7 @@ class ProductsController extends Controller
     {
         $categories = Category::all();
 
-        // Retrieve the selected category
+        // Retrieve the selected category, price range, and search query
         $selectedCategory = $request->input('category');
         $priceRange = $request->input('price_range');
         $minPrice = null;
@@ -109,6 +109,7 @@ class ProductsController extends Controller
 
         $searchQuery = $request->input('product_name');
 
+        // Start with all products and apply filters
         $products = Products::query();
 
         if ($selectedCategory && $selectedCategory !== 'all') {
@@ -125,7 +126,11 @@ class ProductsController extends Controller
             $products->where('name', 'like', '%' . $searchQuery . '%');
         }
 
-        $products = $products->paginate(8); // Adjust the number of products per page as needed
+        // Order products in descending order by ID (reverse order)
+        $products->orderBy('id', 'desc');
+
+        // Adjust the number of products per page as needed
+        $products = $products->paginate(8);
 
         if ($products->isEmpty()) {
             return view('categories', compact('products', 'categories'))->with('message', 'No matching products found.');
@@ -133,6 +138,7 @@ class ProductsController extends Controller
 
         return view('categories', compact('products', 'categories'));
     }
+
 
 
 
@@ -214,18 +220,15 @@ class ProductsController extends Controller
      */
     public function getProductDetails($product)
     {
-        // Replace this with your actual logic to fetch product details
-        // For example, you may fetch product details from the database.
-        // I'm assuming the details are stored in the product model.
         return [
-            'quantity' => $product->quantity, // Replace with the actual property name
-            // Add other details here
+            'quantity' => $product->quantity,
         ];
     }
 
     public function show(Products $product)
     {
         $categories = Category::all();
+
         $details = $this->getProductDetails($product);
         return view('product', compact('product', 'categories', 'details'));
     }

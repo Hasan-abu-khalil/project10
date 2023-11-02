@@ -73,9 +73,9 @@
                     <div class="blog-section">
                         <h1 class="mb-2 text-light">Pages</h1>
                         <ul>
-                            <li><a href="home" class="text-light">Home Page</a></li>
+                            <li><a href="/" class="text-light">Home Page</a></li>
                             <li><a href="about" class="text-light">About Us</a></li>
-                            <li><a href="Contact" class="text-light">Contact Us</a></li>
+                            <li><a href="contact-us" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

@@ -122,6 +122,9 @@ html::-webkit-scrollbar-track {
 
 }
 
+
+
+
 .navs {
     height: 90px;
     background: #000;
@@ -159,7 +162,10 @@ html::-webkit-scrollbar-track {
     text-decoration: none;
 }
 
-
+.active{
+    /* background-color: #fff; */
+    color: #3498db !important;
+}
 
 .nav-mid-right-side {
     display: flex;
@@ -218,10 +224,11 @@ html::-webkit-scrollbar-track {
 
 .carousel-inner p {
     font-size: 22px;
-    margin: 10px 0  20px 0;
+    margin: 10px 0 20px 0;
 }
-.carousel-inner a{
-    padding: 10px 20px ;
+
+.carousel-inner a {
+    padding: 10px 20px;
     background-color: #3498db;
     border-radius: 5px;
     text-decoration: none;
@@ -229,7 +236,8 @@ html::-webkit-scrollbar-track {
     transition: all .3s;
 
 }
-.carousel-inner a:hover{
+
+.carousel-inner a:hover {
     background-color: #0056b3;
 }
 
@@ -762,8 +770,8 @@ footer .container {
         width: 150px;
     }
 
-    .carousel-inner a{
-        padding: 8px 15px ;
+    .carousel-inner a {
+        padding: 8px 15px;
         background-color: #3498db;
         border-radius: 5px;
         text-decoration: none;

@@ -5,12 +5,10 @@
 
     <div class="nav-mid-right-side" id="navbar">
         <div class="nav-mid-side nav-media">
-            <a href="/">Home</a>
-
-
-            <a href="categories" class="{{ request()->is('categories*') ? 'active' : '' }}">Products</a>
-            <a href="{{route('about')}}" class="{{ request()->is('about*') ? 'active' : '' }}">About</a>
-            <a href="contact-us" class="{{ request()->is('contact-us*') ? 'active' : '' }}">Contact US</a>
+            <a href="/" class="{{ Request::is('/') ? 'active' : '' }}">Home</a>
+            <a href="categories" class="{{ Request::is('categories') ? 'active' : '' }}">Products</a>
+            <a href="{{ route('about') }}" class="{{ Request::is('about') ? 'active' : '' }}">About</a>
+            <a href="contact-us" class="{{ Request::is('contact-us') ? 'active' : '' }}">Contact US</a>
         </div>
 
         <div class="nav-right-side nav-media">
@@ -22,8 +20,11 @@
                         <div><i class="fa-solid fa-user "></i>
                         </div>
                         <ul class="dropdown">
-                            <li><a href="{{ route('profile.edit') }}"class="{{ request()->is('profile*') ? 'active' : '' }}">Profile</a> </li>
-                            <li><a href="chatify" class="{{ request()->is('chatify*') ? 'active' : '' }}">Message</a> </li>
+                            <li><a
+                                    href="{{ route('profile.edit') }}"class="{{ request()->is('profile*') ? 'active' : '' }}">Profile</a>
+                            </li>
+                            <li><a href="chatify" class="{{ request()->is('chatify*') ? 'active' : '' }}">Message</a>
+                            </li>
                             <li>
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">

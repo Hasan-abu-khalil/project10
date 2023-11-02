@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Category;
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -15,10 +16,15 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $products = DB::table('products')->get();
-        $categorys = Category::all();
+        $categorys = Category::orderBy('created_at', 'desc')->get();
+        $categorys = $categorys->reverse();
+
+        $products = Products::orderBy('created_at', 'desc')->get();
+        $products = $products->reverse();
+
         return view('home', compact('categorys', 'products'));
     }
+
 
 
 

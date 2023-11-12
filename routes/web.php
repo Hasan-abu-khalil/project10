@@ -33,6 +33,7 @@ Route::get('about', function () {
 //     return view('contact');
 // });
 
+//contact
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
@@ -85,26 +86,25 @@ Route::resource('cart', CartsController::class);
 
 
 
-
+//chackout
 
 Route::resource('user', UserController::class);
 Route::get('/checkout', [CheckoutController::class, 'show'])->name('checkout.show');
 Route::get('/success', function () {
     return view('success');
 })->name('success');
-
-
-
 Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('checkout');
 
-
+//google
 Route::get('auth/google', [GoogleAuthController::class, 'redirectToGoogle'])->name('google');
 Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback']);
+
+// Paypal routes
+Route::post('/buyProduct', [PaypalController::class, 'buyProduct'])->name('buyProduct');
+Route::get('paypal/success', [PaypalController::class, 'success'])->name('paypal_success');
+Route::get('paypal/cancel', [PaypalController::class, 'cancel'])->name('paypal_cancel');
+
 // admin_dasebord route
-
-
-
-
 
 Route::prefix('/')->middleware(['auth', 'admin'])->group(function () {
 

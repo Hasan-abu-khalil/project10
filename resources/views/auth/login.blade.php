@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <!-- Session Status -->
+    <script src="https://kit.fontawesome.com/659ed253a5.js" crossorigin="anonymous"></script>
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="d-lg-flex half">
@@ -51,9 +51,10 @@
                             </div>
                             <div>
                                 <a href="{{ route('register') }}">Register</a>
-                                <br>
-                                <br>
-                                <a href="{{ route('google') }}">google</a>
+                            </div>
+                            <div class="login-google">
+                                <a href="{{ route('google') }}"><i class="fa-brands fa-google"></i></a>
+
                             </div>
 
                             <x-primary-button type="submit" class="btn btn-block submit">Log In</x-primary-button>

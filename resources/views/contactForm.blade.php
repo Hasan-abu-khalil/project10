@@ -87,7 +87,7 @@
         </div>
         <div class="form-group">
             <label for="message">Message:</label>
-            <textarea name="message" rows="3" class="form-control" id="message">{{ old('message') }}</textarea>
+            <textarea name="message" rows="5" class="form-control" id="message">{{ old('message') }}</textarea>
             @if ($errors->has('message'))
                 <span class="text-danger">{{ $errors->first('message') }}</span>
             @endif

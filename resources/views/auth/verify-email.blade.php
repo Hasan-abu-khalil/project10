@@ -18,6 +18,12 @@
                     {{ __('Resend Verification Email') }}
                 </x-primary-button>
             </div>
+
+            <div class="d-flex justify-content-between">
+               
+                <a href="/">Home</a>
+
+            </div>
         </form>
 
         <form method="POST" action="{{ route('logout') }}">

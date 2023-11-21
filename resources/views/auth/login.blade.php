@@ -1,4 +1,7 @@
 <x-guest-layout>
+
+    @section('title', 'Login')
+
     <script src="https://kit.fontawesome.com/659ed253a5.js" crossorigin="anonymous"></script>
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -49,8 +52,10 @@
                                     @endif
                                 </span>
                             </div>
-                            <div>
+                            <div class="d-flex justify-content-between">
                                 <a href="{{ route('register') }}">Register</a>
+                                <a href="/">Home</a>
+
                             </div>
                             <div class="login-google">
                                 <a href="{{ route('google') }}"><i class="fa-brands fa-google"></i></a>

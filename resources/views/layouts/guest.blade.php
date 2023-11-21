@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'login') }}</title>
+    <title>KRKABH | @yield('title') </title>
+    <link rel="shortcut icon" href="../img/logo.png">
+
 
     <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }} ">
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }} ">
@@ -21,18 +23,18 @@
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 
-<body >
+<body>
 
-        {{-- <div>
+    {{-- <div>
                 <a href="/">
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
             </div> --}}
 
 
-            {{ $slot }}
+    {{ $slot }}
 
-    
+
 </body>
 
 </html>

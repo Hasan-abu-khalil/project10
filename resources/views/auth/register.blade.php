@@ -55,6 +55,8 @@
 
 <x-guest-layout>
     <!-- Session Status -->
+    @section('title', 'Register')
+
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="d-lg-flex half">
@@ -110,7 +112,7 @@
 
                             </div>
 
-                            <div class="d-flex mb-4 align-items-center">
+                            {{-- <div class="d-flex mb-4 align-items-center">
                                 <label class="control control--checkbox mb-0">
                                     <span class="caption">Remember me</span>
                                     <input type="checkbox" name="remember" />
@@ -122,13 +124,15 @@
                                             Password</a>
                                     @endif
                                 </span>
-                            </div>
+                            </div> --}}
 
-                            <div>
+                            <div class="d-flex justify-content-between">
                                 <a href="{{ route('login') }}">Login</a>
-                                <br>
-                                <br>
+                                <a href="/">Home</a>
+
                             </div>
+                            <br>
+
 
                             <x-primary-button type="submit" class="btn btn-block submit">Register</x-primary-button>
                         </form>

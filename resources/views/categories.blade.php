@@ -4,7 +4,7 @@
     @section('title', 'Products')
 
     <header class="header-category">
-        <h1>Categories</h1>
+        <h1>Products</h1>
     </header>
 
     <section class="slider-categories">

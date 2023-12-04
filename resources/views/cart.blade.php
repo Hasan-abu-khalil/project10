@@ -102,7 +102,7 @@
                             <button type="submit">Proceed to check out</button>
                         </form>
                     @endif
-                    <a href="categories"><button>Update Cart</button></a>
+                    <a href="categories"><button>Add items to Cart</button></a>
                 </div>
             </div>
         </div>
